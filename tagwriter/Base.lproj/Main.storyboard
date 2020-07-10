@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tagwriter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-Ck-fmb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="tagwriter" id="jMa-S0-z4H"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="da2-bB-WPB">
+                                <rect key="frame" x="20" y="88" width="374" height="681"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tY-HZ-Vq2">
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xJF-6Z-HFJ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" id="PZ7-5W-Nfr">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zhs-Sk-oXP">
+                                            <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="antenna.radiowaves.left.and.right" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="writeTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yA-zP-LFR"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2tY-HZ-Vq2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HoH-XV-H1W"/>
+                            <constraint firstItem="2tY-HZ-Vq2" firstAttribute="top" secondItem="da2-bB-WPB" secondAttribute="bottom" id="OJU-my-W5M"/>
+                            <constraint firstItem="oEb-Ck-fmb" firstAttribute="trailing" secondItem="2tY-HZ-Vq2" secondAttribute="trailing" id="OeK-2E-6BL"/>
+                            <constraint firstAttribute="trailing" secondItem="oEb-Ck-fmb" secondAttribute="trailing" id="QTC-YJ-GV7"/>
+                            <constraint firstItem="oEb-Ck-fmb" firstAttribute="centerX" secondItem="da2-bB-WPB" secondAttribute="centerX" id="hE3-mL-Cg0"/>
+                            <constraint firstItem="da2-bB-WPB" firstAttribute="top" secondItem="oEb-Ck-fmb" secondAttribute="bottom" id="nTW-BN-oTu"/>
+                            <constraint firstItem="da2-bB-WPB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rND-vQ-hGP"/>
+                            <constraint firstItem="oEb-Ck-fmb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tge-7i-EeU"/>
+                            <constraint firstItem="oEb-Ck-fmb" firstAttribute="leading" secondItem="2tY-HZ-Vq2" secondAttribute="leading" id="uy6-oD-1Oy"/>
+                            <constraint firstItem="oEb-Ck-fmb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x1q-TQ-FVR"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tag_body" destination="da2-bB-WPB" id="N9Q-Ps-JFv"/>
+                        <outlet property="tag_button" destination="zhs-Sk-oXP" id="oay-ca-4gi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="antenna.radiowaves.left.and.right" catalog="system" width="128" height="109"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
