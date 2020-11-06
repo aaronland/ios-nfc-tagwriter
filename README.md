@@ -12,7 +12,7 @@ It does allow tags to be locked so you should not use this application for deplo
 
 ### Launch
 
-![](images/tagreader.png)
+![](images/tagwriter.png)
 
 ### Writing
 
