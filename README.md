@@ -10,6 +10,10 @@ Although there are definitely places where this application can be improved it i
 
 **This application does allow tags to be locked so you should not use this application for deploying NFC tags in a "production" environment.**
 
+## Caveats
+
+* This application only writes "well known text" message payloads.
+
 ## Examples
 
 ### Input
